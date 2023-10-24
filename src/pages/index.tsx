@@ -44,20 +44,45 @@ const Home = () => {
     getData();
   }, []);
 
-  const handleChangeSlider = (_: Event, newValue: number | number[]) => {
+  const handleChangeRedSlider = (_: Event, newValue: number | number[]) => {
     setRed(newValue as number);
+  };
+
+  const handleChangeGreenSlider = (_: Event, newValue: number | number[]) => {
+    setGreen(newValue as number);
+  };
+
+  const handleChangeBlueSlider = (_: Event, newValue: number | number[]) => {
+    setBlue(newValue as number);
   };
 
   return (
     <div>
       {/* <Switch {...label} onChange={() => setDht(dht ? 0 : 1)} /> */}
+      <p>{dht}</p>
       <Slider
         defaultValue={50}
         min={0}
         max={255}
         aria-label="Default"
         valueLabelDisplay="auto"
-        onChange={handleChangeSlider}
+        onChange={handleChangeRedSlider}
+      />
+      <Slider
+        defaultValue={50}
+        min={0}
+        max={255}
+        aria-label="Default"
+        valueLabelDisplay="auto"
+        onChange={handleChangeGreenSlider}
+      />
+      <Slider
+        defaultValue={50}
+        min={0}
+        max={255}
+        aria-label="Default"
+        valueLabelDisplay="auto"
+        onChange={handleChangeBlueSlider}
       />
       {/* <Button variant="contained" onClick={writeUserData}>
         Click
