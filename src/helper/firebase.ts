@@ -18,7 +18,7 @@ export const writeDataBase = async ({ path, data }: IWriteDataBase) => {
 
 interface IReadDataBase {
   path: string;
-  callBack: (value: unknown) => void;
+  callBack: (value: any) => any;
 }
 
 export const readDataBase = async ({ path, callBack }: IReadDataBase) => {

@@ -15,7 +15,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Outlet } from "react-router-dom";
 import SpaceDashboardIcon from "@mui/icons-material/SpaceDashboard";
-import CreateNewFolderIcon from "@mui/icons-material/CreateNewFolder";
+// import CreateNewFolderIcon from "@mui/icons-material/CreateNewFolder";
 
 const drawerWidth = 240;
 
@@ -46,14 +46,6 @@ export default function ResponsiveDrawer(props: Props) {
               <SpaceDashboardIcon />
             </ListItemIcon>
             <ListItemText primary={"Dashboard"} />
-          </ListItemButton>
-        </ListItem>
-        <ListItem disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <CreateNewFolderIcon />
-            </ListItemIcon>
-            <ListItemText primary={"Add Device"} />
           </ListItemButton>
         </ListItem>
       </List>
